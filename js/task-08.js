@@ -4,6 +4,7 @@ form.addEventListener("submit", ofFormSubmit)
 
 function ofFormSubmit(event) {
   event.preventDefault();
+  
     const formElements = event.currentTarget.elements;
     const email = formElements.email.value;
     const password = formElements.password.value;
@@ -14,7 +15,9 @@ function ofFormSubmit(event) {
     if (!password || !email) {
         return alert("Fields cannot be empty");
     }
-    
+    event.target.reset();
   console.log(formData);
 };
 
+document.login-form.reset();
+ 
